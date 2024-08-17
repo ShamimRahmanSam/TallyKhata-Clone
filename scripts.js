@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".fade-in");
+  const sections = document.querySelectorAll(
+    ".fade-in, .slide-left, .slide-right"
+  );
+
   const observerOptions = {
     threshold: 0.1,
   };
@@ -8,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        observer.unobserve(entry.target);
+        observer.unobserve(entry.target); // Optional: Uncomment if you want to observe only once
       }
     });
   }, observerOptions);

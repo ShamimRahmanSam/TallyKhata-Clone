@@ -1,8 +1,20 @@
-body {
-  font-family: Arial, sans-serif;
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a,
+img {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
 }
 
 header {
@@ -13,48 +25,40 @@ header {
   top: 0;
   z-index: 1000;
   background-color: #ffffff;
+  animation: slideDown 0.8s ease-out forwards;
 }
 
 .custom-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10px 50px;
   font-size: 20px;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
-
-.fade-in.show {
-  opacity: 1;
-}
-
 .logo img {
-  margin-top: 16px;
-  margin-left: 50px;
-  height: 40px;
+  padding-top: 20px;
+  height: 60px;
 }
 
 .nav-links {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
+  padding: 0 15px;
+  font-size: 18px;
 }
 
 .nav-links .dropdown {
   position: relative;
+  padding-left: 100px;
+  line-height: 2;
 }
 
 .nav-links .dropdown-content {
@@ -62,14 +66,15 @@ header {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 200px;
-  min-height: 150px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  left: 0;
 }
 
 .nav-links .dropdown-content li {
-  padding: 8px 16px;
+  padding: 16px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -94,7 +99,6 @@ header {
 }
 
 .download-button {
-  margin-right: 50px;
   padding: 10px;
   background-color: #ffe6e6;
   color: #ff0000;
@@ -120,9 +124,29 @@ header {
   overflow: hidden;
 }
 
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-image {
   max-width: 100%;
   height: auto;
+  opacity: 0; /* Initial state: hidden */
+  transform: scale(1.1); /* Initial state: slightly zoomed in */
+  animation: zoomFadeIn 2s ease-out forwards;
+}
+
+@keyframes zoomFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1); /* Start slightly zoomed in */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Zoom to normal size */
+  }
 }
 
 .features-section {
@@ -151,6 +175,9 @@ header {
   width: 300px;
   height: 300px;
   margin-bottom: 20px;
+  transform: translateY(30px); /* Initial state slightly below */
+  opacity: 0; /* Initial hidden state */
+  animation: imageSlideUp 1s ease-out forwards;
 }
 
 .feature-item h2 {
@@ -170,16 +197,35 @@ header {
   }
 }
 
+@keyframes imageSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Slide to the original position */
+  }
+}
+
 .feature-item:nth-child(1) {
   animation-delay: 0.2s;
+}
+
+.feature-item:nth-child(1) .feature-image {
+  animation-delay: 0.4s; /* Delay slightly longer for images */
 }
 
 .feature-item:nth-child(2) {
   animation-delay: 0.4s;
 }
 
+.feature-item:nth-child(2) .feature-image {
+  animation-delay: 0.6s;
+}
+
 .feature-item:nth-child(3) {
   animation-delay: 0.6s;
+}
+
+.feature-item:nth-child(3) .feature-image {
+  animation-delay: 0.8s;
 }
 
 .video-section {
@@ -297,6 +343,61 @@ header {
 
 .buttons button:hover {
   background-color: #ff9999;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out;
+}
+.slide-left.show {
+  transform: translateX(0);
+}
+
+.slide-right {
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+}
+
+.slide-right.show {
+  transform: translateX(0);
+}
+
+.app-box:nth-child(odd) .app-image {
+  animation-delay: 0.2s;
+}
+
+.app-box:nth-child(even) .app-image {
+  animation-delay: 0.4s;
+}
+
+.app-box:nth-child(odd) .app-details {
+  animation-delay: 0.4s;
+}
+
+.app-box:nth-child(even) .app-details {
+  animation-delay: 0.2s;
 }
 
 .business-grid {
@@ -419,7 +520,7 @@ h2 {
   cursor: pointer;
 }
 
-video {
+.video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -564,39 +665,11 @@ video {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
-  .custom-header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .nav-links {
-    flex-direction: row;
-  }
-
-  .nav-links li {
-    margin: 0 10px;
-  }
-
-  .download-button {
-    font-size: 18px;
-  }
+.fade-in {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out;
 }
 
-@media (min-width: 1024px) {
-  .custom-header {
-    padding: 20px 40px;
-  }
-
-  .nav-links {
-    justify-content: flex-start;
-  }
-
-  .nav-links li {
-    margin: 0 20px;
-  }
-
-  .download-button {
-    font-size: 20px;
-  }
+.fade-in.show {
+  opacity: 1; /* Fully visible */
 }
