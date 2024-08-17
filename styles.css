@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  width: 100%; /* Ensure the header spans the full width */
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -147,11 +147,9 @@ header {
   width: 30%;
   padding: 20px;
   box-sizing: border-box;
-  opacity: 0; /* Start with hidden elements */
-  transform: translateY(
-    50px
-  ); /* Start the elements below their final position */
-  animation: slideUp 0.8s ease-out forwards; /* Slide up animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 0.8s ease-out forwards;
 }
 
 .feature-image {
@@ -177,7 +175,6 @@ header {
   }
 }
 
-/* Add a delay to each item to create a staggered effect */
 .feature-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -194,11 +191,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #ffffff; /* Background color */
-  opacity: 0; /* Initially hidden for fade-in effect */
-  transition: opacity 1s ease; /* Smooth fade-in transition */
-  margin-top: -20px; /* Reduce the space above the video section */
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: opacity 1s ease;
+  margin-top: -20px;
 }
 
 .video-content {
@@ -208,22 +205,22 @@ header {
 .videoThumbnail {
   max-width: 100%;
   height: auto;
-  cursor: pointer; /* Show pointer on hover */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .videoThumbnail:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  transform: scale(1.05);
 }
 
 .show {
-  opacity: 1; /* Show the section when in view */
+  opacity: 1;
 }
 
 #promoVideo {
   max-width: 100%;
   height: auto;
-  display: none; /* Hidden until the image is clicked */
+  display: none;
 }
 
 .app-container {
@@ -354,15 +351,8 @@ header {
 .container {
   margin: 50px;
   padding: 5px 0 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
+
 h2 {
   display: flex;
   justify-content: center;
@@ -417,10 +407,10 @@ h2 {
 
 .MainVideoContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-  gap: 20px; /* Adds space between the video containers */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   margin: 0 auto;
-  max-width: 1040px; /* Adjust this based on your preferred layout width */
+  max-width: 1040px;
   padding: 20px;
   text-align: center;
 }
@@ -580,16 +570,16 @@ video {
 
 @media (min-width: 768px) {
   .custom-header {
-    flex-direction: row; /* Align elements horizontally */
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .nav-links {
-    flex-direction: row; /* Align links horizontally */
+    flex-direction: row;
   }
 
   .nav-links li {
-    margin: 0 10px; /* Adjust horizontal margin */
+    margin: 0 10px;
   }
 
   .download-button {
@@ -599,15 +589,15 @@ video {
 
 @media (min-width: 1024px) {
   .custom-header {
-    padding: 20px 40px; /* Increase padding for larger screens */
+    padding: 20px 40px;
   }
 
   .nav-links {
-    justify-content: flex-start; /* Align links to the start */
+    justify-content: flex-start;
   }
 
   .nav-links li {
-    margin: 0 20px; /* Increase horizontal margin */
+    margin: 0 20px;
   }
 
   .download-button {
