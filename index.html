@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TallyKhata - Run Business with Ease | SRS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="custom-header">
+        <div class="logo">
+          <img src="/assets/TallyKhata logo.png" alt="Logo" />
+        </div>
+        <div class="nav-wrapper">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ledger">ledger</a></li>
+            <li><a href="#on-the-tile">on the tile</a></li>
+            <li><a href="#super-qr">Super QR</a></li>
+            <li><a href="#enterprise">enterprise</a></li>
+            <li class="dropdown">
+              <a href="#blog">Blog &#9662;</a>
+              <ul class="dropdown-content">
+                <li><a href="#blog1">Media</a></li>
+                <li><a href="#blog2">General Inquiries</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#bangla"
+                ><img src="/assets/flag1.png" alt="BD Flag" /> Bangla &#9662;</a
+              >
+              <ul class="dropdown-content">
+                <li>
+                  <a href="#bangla1"
+                    ><img src="/assets/flag1.png" alt="BD Flag" /> Bangla</a
+                  >
+                </li>
+                <li>
+                  <a href="#bangla2"
+                    ><img src="/assets/flag2.png" alt="IN Flag" /> English</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="#download" class="download-button">Download</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <img src="/assets/cover.png" alt="Cover Image" class="hero-image" />
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div><h2>Talikhata app makes running business easy</h2></div>
+        <div class="features">
+          <div class="feature-item">
+            <img
+              src="/assets/businessAcc.png"
+              alt="Business accounts"
+              class="feature-image"
+            />
+            <h2>Business accounts</h2>
+            <p>
+              Pie-to-pie calculations are in front of the eyes. The rest of the
+              customer accounts can be kept and transaction messages can be
+              managed.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="/assets/Wallet.png"
+              alt="Digital wallet"
+              class="feature-image"
+            />
+            <h2>Digital wallet</h2>
+            <p>
+              Get Super QR code payments from all mobile banking and bank apps
+              and earn extra income by selling recharges.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img
+              src="/assets/loans.png"
+              alt="Digital Loans"
+              class="feature-image"
+            />
+            <h2>Digital Loans</h2>
+            <p>
+              On the basis of business transactions and profile, one can apply
+              for a loan in the bank on easy terms through Talikhata.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section fade-in">
+        <div class="video-content">
+          <img
+            src="/assets/mainVideo.PNG"
+            alt="Promotional Video"
+            class="videoThumbnail"
+            onclick="playVideo()"
+          />
+          <video id="promoVideo" width="100%" controls style="display: none">
+            <source src="https://youtu.be/on-xelQyvFI" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+      <section>
+        <div class="app-container">
+          <h1>All business in one app</h1>
+          <br />
+          <div class="app-box">
+            <div class="app-image">
+              <img src="/assets/promo1.png" alt="Business App Image" />
+            </div>
+            <div class="app-details">
+              <h2>Business accounting is very easy</h2>
+              <p>
+                Keep accounts in Talikhata app without using different accounts
+                for balance, cash, payments. The pie-to-pie calculation of the
+                business will be in front of the eyes.
+              </p>
+              <ul>
+                <li>
+                  List of customer-supplier with payable and receivable amounts
+                </li>
+                <li>Data backup secures business information</li>
+                <li>Auto calculation ensures accuracy</li>
+                <li>Very easy to record transactions</li>
+                <li>App is in Bengali language</li>
+              </ul>
+              <div class="buttons">
+                <button>Download TallyKhata</button>
+                <button>Watch Video</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="app-container">
+          <div class="app-box">
+            <div class="app-details">
+              <h2>Transaction message improves customer relationship</h2>
+              <p>
+                Users send messages to customers and suppliers in case of credit
+                transactions. It removes misunderstanding among them regarding
+                payable and receivable amounts. Hence relationship among them
+                improves, consequently sales increase.
+              </p>
+              <ul>
+                <li>
+                  Send details transactions through SMS, IMO, WhatsApp,
+                  Messenger etc
+                </li>
+                <li>Recover receivable money by sending payment reminder</li>
+                <li>Send details of sold products to customers</li>
+              </ul>
+              <div class="buttons">
+                <button>Download TallyKhata</button>
+                <button>Watch Video</button>
+              </div>
+            </div>
+            <div class="app-image">
+              <img src="/assets/promo2.png" alt="Promotional Image" />
+            </div>
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="app-container">
+          <div class="app-box">
+            <div class="app-image">
+              <img src="/assets/promo3.png" alt="Super QR Image" />
+            </div>
+            <div class="app-details">
+              <h2>
+                Super <u>QR</u> - One code accepts payments from multiple apps
+              </h2>
+              <p>
+                Merchants are now able to accept payment easily. Users can apply
+                and get the Super <u>QR</u> sitting at their shops. It takes
+                only 30 minutes to get and start receiving payment.
+              </p>
+              <ul>
+                <li>Receive payment from bKash, Rocket and other bank apps</li>
+                <li>Transfer money to bank account easily</li>
+                <li>
+                  Notification sound reads the message when payment happened
+                </li>
+                <li>Competitive service charge</li>
+              </ul>
+              <div class="buttons">
+                <button>Get Super QR</button>
+                <button>Watch Video</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="app-container">
+          <div class="app-box">
+            <div class="app-details">
+              <h2>Receive payment from 34 bank and mobile banking apps</h2>
+              <p>
+                TallyPay Super <u>QR</u> is connected with Bangla QR. Get rid of
+                keeping multiple QR code and accounts. One single account to
+                manage your payment.
+              </p>
+              <ul>
+                <li>Accept payments from Bangla QR enabled apps</li>
+                <li>Successful scan in single try</li>
+                <li>Much more transaction limit</li>
+              </ul>
+              <div class="buttons">
+                <button>Get Super QR</button>
+              </div>
+            </div>
+            <div class="app-image">
+              <img src="/assets/promo4.png" alt="Payment Receive Image" />
+            </div>
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="app-container">
+          <div class="app-box">
+            <div class="app-image">
+              <img src="/assets/promo5.png" alt="Business App Image" />
+            </div>
+            <div class="app-details">
+              <h2>Easy business loans</h2>
+              <p>
+                To expand and grow business, merchants need a loan at times.
+                TallyKhata gives access to loans from banks.
+              </p>
+              <ul>
+                <li>Apply from TallyKhata app, no need to visit branches</li>
+                <li>
+                  Get loan money at TallyPay account and pay installments from
+                  that account
+                </li>
+                <li>
+                  Able to get loan based on transaction and business profile
+                </li>
+              </ul>
+              <div class="buttons">
+                <button>Get Super QR</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /><br /><br /><br /><br />
+      <section class="hero-section">
+        <div class="hero-content">
+          <img src="/assets/promo6.png" alt="Promo Image" class="hero-image" />
+        </div>
+      </section>
+
+      <section>
+        <div class="business-grid">
+          <h2>
+            All types of shops and small businessmen run business on Talikhata
+            app
+          </h2>
+          <div class="grid">
+            <div class="grid-item">
+              <img src="/assets/gStore.png" alt="General store" />
+              <p>General store</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/pharmacy.png" alt="Pharmacy" />
+              <p>Pharmacy</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/Restaurant.png" alt="Restaurant" />
+              <p>Restaurant</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/cafe.png" alt="Cafe" />
+              <p>Cafe</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/onlinebusiness.png" alt="E-commerce" />
+              <p>Online Business</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/supershop.png" alt="Clothing store" />
+              <p>Super Shop</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/fashion.png" alt="Clothing store" />
+              <p>Fashion</p>
+            </div>
+            <div class="grid-item">
+              <img src="/assets/others.png" alt="Others" />
+              <p>Others</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h2>License and Accreditation</h2>
+          <div class="certifications">
+            <div class="cert-box">
+              <img
+                src="/assets/BangladeshBank.png"
+                alt="Licensed by Bangladesh Bank"
+              />
+              <div class="hover-text">Licensed Payment Service Provider</div>
+            </div>
+            <div class="cert-box">
+              <img src="/assets/certified.png" alt="PCI DSS Certified" />
+              <div class="hover-text">PCI DSS Compliant</div>
+            </div>
+            <div class="cert-box">
+              <img
+                src="/assets/visa.png"
+                alt="Visa Accelerator Program Winner"
+              />
+              <div class="hover-text">Winner of 2022 Cohort</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>User trust is our achievement</h2>
+        <div class="MainVideoContainer">
+          <div class="video-container">
+            <video controls poster="/assets/Video1.PNG">
+              <source src="video1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="video-container">
+            <video controls poster="/assets/video2.PNG">
+              <source src="video2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="video-container">
+            <video controls poster="/assets/Video3.PNG">
+              <source src="video1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="video-container">
+            <video controls poster="/assets/video4.PNG">
+              <source src="video2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="footer-container">
+          <div class="footer">
+            <div class="about">
+              <img
+                src="/assets/footerlogo.png"
+                alt="TallyKhata Logo"
+                class="logo"
+              />
+              <p>
+                Talikhata is a leading digital platform for small businesses and
+                shops in Bangladesh. This is a very simple app. Merchants are
+                using Talikhata app to keep track of daily sales and take
+                digital payments from customers through QR codes. It is the
+                largest MSME platform in Bangladesh with more than 1 million
+                monthly users. Talikhata is working to enable micro-merchants in
+                the country to keep accurate accounts, increase sales through
+                digital payments and grow business through loans.
+              </p>
+              <p>
+                Bangladesh is a growing economy with 17 crore people and 1.2
+                crore small businesses. Talikhata is determined to play a role
+                in the development of millions of businessmen and their families
+                in this country.
+              </p>
+            </div>
+            <div class="links">
+              <h3>Important links</h3>
+              <div>
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><box-icon name="home-heart" type="solid"></box-icon
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><box-icon name="qr"></box-icon>Super QR</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><box-icon name="blogger" type="logo"></box-icon>Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="communication">
+              <h3>Communication</h3>
+              <div>
+                <p>
+                  <box-icon name="current-location"></box-icon>
+                  <strong>Address:</strong><br />
+                  Mohammadpur, Dhaka-1207.
+                </p>
+              </div>
+              <p>
+                <box-icon name="contact" type="solid"></box-icon
+                ><strong>Help line:</strong> 16726
+              </p>
+              <p>
+                <strong>
+                  <box-icon name="envelope" type="solid"></box-icon>Email:
+                </strong>
+                srs@gmail.com
+              </p>
+            </div>
+            <div class="newsletter">
+              <h3>Newsletter</h3>
+              <p>Enter your email to receive all updates on the list</p>
+              <div class="email-box">
+                <input type="email" placeholder="Enter your email" />
+                <button type="submit">
+                  <box-icon name="envelope"></box-icon>
+                </button>
+              </div>
+              <div class="social-icons">
+                <a href="#"
+                  ><box-icon name="facebook-circle" type="logo"></box-icon
+                ></a>
+                <a href="#"
+                  ><box-icon name="linkedin" type="logo"></box-icon
+                ></a>
+                <a href="#"><box-icon name="youtube" type="logo"></box-icon></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="Mainfooter">
+        <span>© Pragati Systems Ltd | 2023</span>
+        <span>Conditions</span>
+      </div>
+
+      <div class="button-container">
+        <button onclick="alert('Be a Shark! Have a Good Day!')">
+          Click Here
+        </button>
+        <button onclick="scrollToTop()">Home</button>
+      </div>
+    </footer>
+  </body>
+</html>
