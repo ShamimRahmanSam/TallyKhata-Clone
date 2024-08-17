@@ -248,6 +248,7 @@ header {
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .videoThumbnail:hover {
@@ -518,12 +519,6 @@ h2 {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
-
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .footer-container {
